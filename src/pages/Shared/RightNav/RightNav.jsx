@@ -1,4 +1,7 @@
 import { BsFacebook, BsGithub, BsGoogle, BsInstagram, BsTwitter } from "react-icons/bs";
+import qz1 from '../../../assets/qZone1.png'
+import qz2 from '../../../assets/qZone2.png'
+import qz3 from '../../../assets/qZone3.png'
 
 const RightNav = () => {
     return (
@@ -21,7 +24,7 @@ const RightNav = () => {
                 <BsFacebook className="mr-3"></BsFacebook>
                 Facebook
                </a>
-               <a className="p-4 flex text-lg items-center border-2" href="">
+               <a className="p-4 flex text-lg items-center border-x-2" href="">
                 <BsTwitter className="mr-3"></BsTwitter>
                 Twitter
                </a>
@@ -30,6 +33,15 @@ const RightNav = () => {
                 Instagram
                </a>
             </div>
+            {/* q zone */}
+            <div className="p-3 space-y-3 mb-6">
+                <h2 className="text-3xl">Q Zone</h2>
+                <img src={qz1} alt="" />
+                <img src={qz2} alt="" />
+                <img src={qz3} alt="" />
+
+            </div>
+
         </div>
     );
 };
