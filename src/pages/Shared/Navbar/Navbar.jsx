@@ -1,7 +1,13 @@
+/* eslint-disable no-unused-vars */
 import { Link, NavLink } from "react-router-dom";
 import avatar from "../../../assets/user.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
+
+  const {logOut, user} = useContext(AuthContext);
+
   const navLinks = (
     <>
       <li>
@@ -75,9 +81,14 @@ const Navbar = () => {
               <img src={avatar} />
             </div>
           </label>
+          {
+            user ? 
+            <button className="btn" onClick={logOut}> Sign Out</button>
+            :
           <Link to="/login">
             <button className="btn">Login</button>
           </Link>
+          }
         </div>
       </div>
     </div>
