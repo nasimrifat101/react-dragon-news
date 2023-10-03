@@ -9,11 +9,13 @@ const LeftNav = () => {
       .then((data) => setCata(data));
   }, []);
   return (
-    <div className="space-y-6 p-3">
-      <div className="text-2xl">All Catagories</div>
+    <div className="">
+      <div className="text-xl mb-3 font-bold">All Catagories</div>
+      <div className="space-y-4">
       {
-        cata.map(cat => <Link className="block ml-4 text-xl font-semibold" key={cat.id}>{cat.name}</Link>)
+        cata.map(cat => <Link className="block ml-3 text-lg font-semibold text-gray-400" key={cat.id}>{cat.name}</Link>)
       }
+      </div>
     </div>
   );
 };
